@@ -1,0 +1,50 @@
+%ic {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+    &:before {
+        @extend %ic;
+        display: block;
+    }
+}
+
+._icon-money:before {
+    content: "\e900";
+}
+._icon-nail:before {
+    content: "\e901";
+}
+._icon-percent:before {
+    content: "\e902";
+}
+._icon-qiwi:before {
+    content: "\e903";
+}
+._icon-vk:before {
+    content: "\e904";
+}
+._icon-webmoney:before {
+    content: "\e905";
+}
+._icon-yandex:before {
+    content: "\e906";
+}
+._icon-arrow:before {
+    content: "\e907";
+}
+._icon-file_1:before {
+    content: "\e908";
+}
+._icon-file_2:before {
+    content: "\e909";
+}
+._icon-magni:before {
+    content: "\e90a";
+}

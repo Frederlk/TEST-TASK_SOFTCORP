@@ -1,0 +1,100 @@
+.footer {
+    background-color: $c_secondary_02;
+    min-height: rem(80);
+    display: flex;
+    align-items: center;
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-top: rem(20);
+        padding-bottom: rem(20);
+        gap: rem(20) rem(38);
+        justify-content: space-between;
+        @media (max-width: $pc) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: $mobile) {
+        }
+    }
+
+    &__copy {
+        a {
+            text-transform: uppercase;
+        }
+        @media (max-width: $pc) {
+            flex: 1 1 100%;
+            text-align: center;
+            order: 3;
+            & + .footer__line {
+                display: none;
+            }
+        }
+        @media (min-width: em(400)) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__line {
+        width: rem(1);
+        background-color: $c_tertiary_03;
+        height: rem(18);
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__payment {
+        @media (max-width: $mobileSmall) {
+            order: 2;
+        }
+        @media (max-width: em(400)) {
+            span {
+                display: none;
+            }
+        }
+    }
+
+    &__payment,
+    &__links {
+        @include adaptiveValue("column-gap", 38, 20, 1170, 479.98, 1);
+        display: flex;
+        align-items: center;
+        @media (max-width: $mobile) {
+            flex: 1 1 100%;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        color: $c_tertiary_03;
+        column-gap: rem(10);
+        &::before {
+            font-size: rem(20);
+            flex: 0 0 rem(20);
+            color: $c_primary_03;
+        }
+        @media (max-width: $mobile) {
+            column-gap: rem(5);
+        }
+    }
+
+    &__links {
+        a {
+            color: $c_tertiary_01;
+            transition: color 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $c_primary_03;
+                }
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            order: 1;
+        }
+    }
+}

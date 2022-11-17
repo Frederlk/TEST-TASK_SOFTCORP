@@ -1,0 +1,66 @@
+// Общий файл элементов форм
+// Для подключения/отключения стилей конкретного єлемента формы смотри base/forms/forms.scss
+@import "base/forms/forms";
+
+// Стили для полноэкранного блока
+@import "base/fullscreen";
+
+// Стили для отзывчивых картинок (IBG)
+// Сниппет (HTML): ibg (div c картинкой и классами)
+// Сниппет (HTML): ibga (a c картинкой и классами)
+[class*="-ibg"] {
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+%scrollbar {
+    &::-webkit-scrollbar {
+        width: rem(15);
+    }
+
+    /* 4px scroll thumb. 10px margin from right margin */
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 rem(15) rem(15) $c_secondary_02;
+        border-radius: rem(4);
+        border: solid rem(15) $c_secondary_07;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 rem(15) rem(15) $c_primary_03;
+        border: solid rem(4) transparent;
+        border-radius: rem(15);
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+}
+
+//========================================================================================================================================================
+
+%text_1 {
+    font-size: rem($text_fz_2);
+    line-height: math.div(19, $text_fz_2);
+}
+
+%text_2 {
+    font-size: rem($text_fz_3);
+    line-height: math.div(18, $text_fz_3);
+}
+
+%text_3 {
+    font-size: rem($text_fz_1);
+    line-height: math.div(22, $text_fz_1);
+}
+
+%text_4 {
+    font-size: rem($text_fz_1);
+    line-height: math.div(34, $text_fz_1);
+}

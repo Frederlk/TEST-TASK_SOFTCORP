@@ -1,0 +1,35 @@
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: rem(4);
+    min-height: rem(43);
+    padding: rem(10) rem(30);
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border 0.3s ease 0s;
+
+    background-color: $c_tertiary_01;
+    border: rem(1) solid $c_secondary_01;
+    color: $c_secondary_02;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $c_secondary_02;
+            border: rem(1) solid $c_tertiary_01;
+            color: $c_tertiary_01;
+        }
+    }
+
+    &_primary {
+        background-color: $c_primary_03;
+        color: $c_tertiary_01;
+        border: rem(1) solid $c_tertiary_01;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $c_tertiary_01;
+                color: $c_primary_03;
+                border: rem(1) solid $c_primary_03;
+            }
+        }
+    }
+}

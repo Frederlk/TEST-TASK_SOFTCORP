@@ -1,0 +1,91 @@
+.select {
+    position: relative;
+    &__body {
+        position: relative;
+        background-color: $c_secondary_04;
+    }
+
+    &__title {
+        width: 100%;
+        background-color: $c_tertiary_06;
+        border: rem(1) solid $c_tertiary_01;
+        border-radius: rem(3);
+        @extend %text_3;
+        color: $c_secondary_04;
+        transition: color 0.3s ease 0s, background-color 0.3s ease 0s, border-radius 0.3s ease 0s,
+            border 0.3s ease 0s;
+        ._select-open & {
+            color: $c_tertiary_01;
+            background-color: $c_secondary_08;
+            border-radius: rem(3) rem(3) 0px 0px;
+            border: rem(1) solid $c_secondary_08;
+        }
+    }
+
+    &__value {
+        display: flex;
+        min-height: rem(48);
+        align-items: center;
+        padding: rem(12) rem(10);
+        gap: rem(10);
+        text-align: left;
+        > * {
+            flex: 1 1 auto;
+        }
+        &::after {
+            @extend %ic;
+            display: block;
+            font-size: rem(20);
+            content: "\e907";
+            color: $c_secondary_05;
+            transition: transform 0.3s ease 0s;
+        }
+        ._select-open & {
+            &::after {
+                color: $c_tertiary_01;
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    &__text {
+        flex: 1 1 auto;
+    }
+    &__input {
+        width: 100%;
+        background-color: transparent;
+        height: 100%;
+    }
+
+    &__options {
+        width: 100%;
+        position: absolute;
+        top: rem(48);
+        background-color: $c_secondary_07;
+        border: rem(1) solid $c_secondary_02;
+        border-radius: 0 0 rem(3) rem(3);
+        max-height: rem(175);
+        overflow-y: auto;
+        overflow-x: hidden;
+        @extend %scrollbar;
+    }
+
+    &__option {
+        width: 100%;
+        display: block;
+        text-align: left;
+        cursor: pointer;
+        color: inherit;
+        @extend %text_4;
+        padding: 0px rem(10);
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $c_primary_03;
+            }
+        }
+    }
+
+    &._select-open {
+        z-index: 5;
+    }
+}

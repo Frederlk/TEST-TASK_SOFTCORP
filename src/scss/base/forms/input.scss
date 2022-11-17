@@ -1,0 +1,23 @@
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    padding: rem(12) rem(35) rem(12) rem(10);
+    background-color: $c_tertiary_06;
+    border: rem(1) solid $c_tertiary_01;
+    border-radius: rem(3);
+    @extend %text_3;
+    color: $c_secondary_04;
+
+    &::placeholder {
+        color: inherit;
+    }
+}
