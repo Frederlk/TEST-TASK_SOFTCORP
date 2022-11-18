@@ -30,10 +30,8 @@ if (form) {
 
 const menuBody = document.querySelector(".menu__body");
 
-if (menuBody && window.matchMedia("(max-width: 768px)").matches) {
-    new SimpleBar(menuBody, {
-        autoHide: false,
-    });
+if (menuBody && !isMobile.any() && window.matchMedia("(max-width: 768px)").matches) {
+    new SimpleBar(menuBody);
 }
 
 if (document.body && !isMobile.any()) {
