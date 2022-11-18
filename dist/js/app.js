@@ -1528,12 +1528,12 @@
             }
         };
         function addTouchClass() {
-            if (isMobile.any()) document.documentElement.classList.add("touch");
+            if (isMobile.any()) document.documentElement.classList.add("_touch");
         }
         function addLoadedClass() {
             window.addEventListener("load", (function() {
                 setTimeout((function() {
-                    document.documentElement.classList.add("loaded");
+                    document.documentElement.classList.add("_loaded");
                 }), 0);
             }));
         }

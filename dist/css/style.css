@@ -221,7 +221,7 @@ body::before {
   background-color: rgba(16, 16, 29, 0.9);
 }
 
-.loaded body .header {
+._loaded body .header {
   top: 0;
 }
 

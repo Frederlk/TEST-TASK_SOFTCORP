@@ -93,7 +93,7 @@ body {
         }
     }
     // Сайт загружен
-    .loaded & {
+    ._loaded & {
         .header {
             top: 0;
         }
