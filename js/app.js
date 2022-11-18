@@ -6501,9 +6501,7 @@
             e.preventDefault();
         }));
         const menuBody = document.querySelector(".menu__body");
-        if (menuBody && window.matchMedia("(max-width: 768px)").matches) new simplebar_esm(menuBody, {
-            autoHide: false
-        });
+        if (menuBody && !isMobile.any() && window.matchMedia("(max-width: 768px)").matches) new simplebar_esm(menuBody);
         if (document.body && !isMobile.any()) new simplebar_esm(document.body);
         isWebp();
         addTouchClass();
