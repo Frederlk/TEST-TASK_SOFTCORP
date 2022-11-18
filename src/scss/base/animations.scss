@@ -1,0 +1,81 @@
+.home {
+    &__title {
+        @include inViewBasic(0, rem(30), 0.5, 0, true);
+    }
+    &__body {
+        @include inViewBasic(0, rem(30), 0.5, 0.2, true);
+    }
+    &__buttons {
+        @include inViewBasic(0, rem(30), 0.5, 0.4, true);
+    }
+}
+
+//========================================================================================================================================================
+
+.top {
+    &__title {
+        @include inViewBasic(0, rem(30), 0.5, 0, true);
+    }
+
+    &__subtitle {
+        @include inViewBasic(0, rem(30), 0.5, 0.2, true);
+    }
+}
+
+//========================================================================================================================================================
+
+$dotsQt: 5;
+@media (max-width: $pc) {
+    $dotsQt: 4;
+}
+@media (max-width: em(840)) {
+    $dotsQt: 3;
+}
+@media (max-width: $mobile) {
+    $dotsQt: 5;
+}
+@media (max-width: $mobileSmall) {
+    $dotsQt: 4;
+}
+
+.scheme {
+    @media (min-width: $mobile) {
+        @for $i from 1 through 5 {
+            &__item:nth-of-type(#{$i}) {
+                @include inViewBasic(0, 0, 0.5, ($i - 1) * 0.5, true);
+                @for $j from 1 through $dotsQt {
+                    .dots__item:nth-of-type(#{$j}) {
+                        @include inViewBasic(0, 0, 0.1, (($j - 1) * 0.1 + ($i - 1) * 0.5), true);
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: $mobile) {
+        &__item {
+            @for $i from 1 through 3 {
+                &:nth-of-type(#{$i * 2}n),
+                &:nth-of-type(#{$i * 2}n - 1) {
+                    @include inViewBasic(0, rem(30), 0.5, ($i - 1) * 0.5, true);
+                }
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.form {
+    &__body {
+        @include inViewBasic(0, rem(30), 0.5, 0, true);
+    }
+    &__button-wrap {
+        @include inViewBasic(0, rem(30), 0.5, 0.5, true);
+    }
+}
+
+//========================================================================================================================================================
+
+.footer {
+    @include inViewBasic(0, 0, 0.5, 0);
+}

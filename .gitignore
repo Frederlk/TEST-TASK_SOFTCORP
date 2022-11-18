@@ -22,10 +22,9 @@ yarn-debug.log*
 yarn-error.log*
 
 package-lock.json
-dist/
 Source/
 version.json
 undefined
 **/*.zip
 **/*.rar
-src/img/icons
+_icons

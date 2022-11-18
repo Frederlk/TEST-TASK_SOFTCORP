@@ -6,7 +6,7 @@
         <div class="wrapper">
             @@include('html/_header.htm',{})
             <main class="page">
-                <section class="home">
+                <section data-watch data-watch-once class="home">
                     <div data-fullscreen="" class="home__container">
                         <div class="home__content">
                             <h1 class="home__title">
@@ -37,15 +37,16 @@
                         <img src="@img/main.jpg" alt="Задний фон" />
                     </div>
                 </section>
+
                 <section class="order">
                     <div class="order__container">
-                        <div class="order__top top">
+                        <div data-watch data-watch-once class="order__top top">
                             <h2 class="top__title">Оформление <span>Заказа</span></h2>
                             <p class="top__subtitle">
                                 Перед заполнением формы ознакомьтесь с нашей схемой работы!
                             </p>
                         </div>
-                        <div class="order__scheme scheme">
+                        <div data-watch data-watch-once class="order__scheme scheme">
                             <div class="scheme__item">
                                 <div class="scheme__icon _icon-magni"></div>
                                 <h5 class="scheme__title">Lorem ipsum dolorsit amet</h5>
@@ -71,7 +72,7 @@
                                 <h5 class="scheme__title">Excepteur sint occaecat cupidatat non proident</h5>
                             </div>
                         </div>
-                        <form action="#" class="order__form form">
+                        <form data-watch data-watch-once action="#" class="order__form form">
                             <div class="form__body">
                                 <div class="form__select">
                                     <select name="systemType" class="select">
@@ -122,7 +123,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="order__bg">
+                    <div data-watch data-watch-once class="order__bg">
                         <img src="@img/map.png" alt="Карта Мира" />
                     </div>
                 </section>

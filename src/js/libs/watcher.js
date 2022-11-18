@@ -1,5 +1,5 @@
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile, uniqArray } from "../files/functions.js";
+import { uniqArray } from "../files/functions.js";
 import { flsModules } from "../files/modules.js";
 
 class ScrollWatcher {
