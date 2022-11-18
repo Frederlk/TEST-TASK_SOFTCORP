@@ -64,7 +64,6 @@
     display: flex;
     align-items: center;
     &__body {
-        @extend %scrollbar;
         @media (max-width: $mobile) {
             position: fixed;
             z-index: 5;
@@ -75,6 +74,7 @@
             background-color: $c_secondary_04;
             padding: rem(90) rem(15) rem(30) rem(15);
             overflow-y: auto;
+            overflow-x: hidden;
             transform: translate(100%, 0px);
             transition: transform 0.5s ease;
             border-left: rem(1) solid $c_secondary_02;

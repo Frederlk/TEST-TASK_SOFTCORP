@@ -68,7 +68,6 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "base/null";
 
 body {
-    @extend %scrollbar;
     background-color: $c_secondary_04;
     &::before {
         content: "";

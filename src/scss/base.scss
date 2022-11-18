@@ -1,6 +1,7 @@
 // Общий файл элементов форм
 // Для подключения/отключения стилей конкретного єлемента формы смотри base/forms/forms.scss
 @import "base/forms/forms";
+@import "simplebar/dist/simplebar.css";
 
 // Стили для полноэкранного блока
 @import "base/fullscreen";
@@ -20,29 +21,6 @@
         top: 0;
         left: 0;
         object-fit: cover;
-    }
-}
-
-%scrollbar {
-    &::-webkit-scrollbar {
-        width: rem(15);
-    }
-
-    /* 4px scroll thumb. 10px margin from right margin */
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 rem(15) rem(15) $c_secondary_02;
-        border-radius: rem(4);
-        border: solid rem(15) $c_secondary_07;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        box-shadow: inset 0 0 rem(15) rem(15) $c_primary_03;
-        border: solid rem(4) transparent;
-        border-radius: rem(15);
-    }
-
-    &::-webkit-scrollbar-button {
-        display: none;
     }
 }
 

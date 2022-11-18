@@ -1,5 +1,6 @@
 .select {
     position: relative;
+    z-index: 5;
     &__body {
         position: relative;
         background-color: $c_secondary_04;
@@ -59,14 +60,16 @@
     &__options {
         width: 100%;
         position: absolute;
-        top: rem(48);
-        background-color: $c_secondary_07;
+        top: rem(50);
+        background-color: $c_secondary_04;
         border: rem(1) solid $c_secondary_02;
         border-radius: 0 0 rem(3) rem(3);
-        max-height: rem(175);
+    }
+
+    &__scroll {
         overflow-y: auto;
         overflow-x: hidden;
-        @extend %scrollbar;
+        max-height: rem(175);
     }
 
     &__option {
@@ -83,9 +86,5 @@
                 color: $c_primary_03;
             }
         }
-    }
-
-    &._select-open {
-        z-index: 5;
     }
 }

@@ -72,3 +72,26 @@
         }
     }
 }
+
+//========================================================================================================================================================
+
+.simplebar-scrollbar {
+    border-radius: rem(3);
+    &::before {
+        background-color: $c_primary_03;
+        opacity: 1 !important;
+        left: 0;
+        right: 0;
+        height: 100%;
+        transform: translate(0px, rem(-2));
+    }
+}
+.simplebar-track {
+    right: rem(3);
+    width: rem(7) !important;
+    opacity: 1;
+    background-color: $c_secondary_02;
+    margin-top: rem(3);
+    margin-bottom: rem(3);
+    border-radius: rem(3);
+}

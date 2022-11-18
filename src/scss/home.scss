@@ -214,6 +214,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: rem(30);
+        position: relative;
+        z-index: 1;
         @media (max-width: $tablet) {
             gap: rem(30) rem(20);
         }
@@ -279,6 +281,7 @@
         display: flex;
         justify-content: center;
         margin-top: rem(40);
+
         .btn {
             @extend %text_2;
             font-weight: 600;
@@ -291,8 +294,8 @@
 
 .range {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     &__label {
         @extend %text_3;
         margin-bottom: rem(18);
@@ -305,11 +308,12 @@
         color: $c_tertiary_06;
         display: flex;
         align-items: start;
+        justify-content: flex-end;
         gap: rem(5);
         flex: 0 0 rem(60);
         input {
             text-align: right;
-            width: rem(40);
+            width: rem(35) !important;
             background-color: transparent;
             font-weight: inherit;
             color: inherit;

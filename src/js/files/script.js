@@ -1,4 +1,6 @@
 import * as noUiSlider from "nouislider";
+import SimpleBar from "simplebar";
+import { isMobile } from "../files/functions.js";
 
 const slider = document.querySelector("#nouislider"),
     inputNumber = document.querySelector("#range-input"),
@@ -22,4 +24,18 @@ if (form) {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
     });
+}
+
+//========================================================================================================================================================
+
+const menuBody = document.querySelector(".menu__body");
+
+if (menuBody && window.matchMedia("(max-width: 768px)").matches) {
+    new SimpleBar(menuBody, {
+        autoHide: false,
+    });
+}
+
+if (document.body && !isMobile.any()) {
+    new SimpleBar(document.body);
 }
